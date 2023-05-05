@@ -3,9 +3,6 @@ body, html {
   margin-right:5%;
   }
 
-.header {
-}
-
 .header-flag {
   display: block;
   margin-left: auto;
@@ -34,4 +31,8 @@ body, html {
 .footer {
   margin-top: 20px;
   border-top: 1px solid black;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }

@@ -1,3 +1,6 @@
 flag:
   show: true
   path: /assets/flag.png
+
+author: Morpheus636
+tagline: Built with <a href="https://git.morpheus636.com/jekyll-news">Jekyll-News</a>
