@@ -1,6 +1,18 @@
+title: Jekyll News Theme
+description: Built with <a href="https://git.morpheus636.com/jekyll-news">Jekyll-News</a>
+author: Morpheus636
+
 flag:
   show: true
   path: /assets/flag.png
 
-author: Morpheus636
-tagline: Built with <a href="https://git.morpheus636.com/jekyll-news">Jekyll-News</a>
+disqus:
+  enabled: true
+  shortname:  # Here's where you put your unique shortname
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag

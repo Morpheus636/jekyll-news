@@ -1,0 +1,30 @@
+---
+layout: base 
+---
+{%- if page.title -%}
+  <h1>{{page.title}}</h1>
+{%- endif -%}
+<hr/ class="hed-rule">
+{%- if page.subhed -%}
+  <h2 class="subhed">{{ page.subhed }}</h2>
+{%- endif -%}
+
+{%- assign date = page.date | date: "%B %-d, %Y" -%}
+{%- if page.author and page.author-title -%}
+  <h3 class="byline">{{page.author}}, {{page.author-title}} | {{ date }}</h3>
+{%- else -%}
+  <h3 class="byline">{{ date }}</h3>
+{%- endif -%}
+
+{%- if page.featured-image.path -%}
+  <div class="featured-image-container">
+  <figure class="featured-image">
+    <img src="{{ page.featured-image.path }}"/>
+    <figcaption>{{ page.featured-image.cutline }} - Photo by {{ page.featured-image.credit }}</figcaption>
+  </figure>
+  </div>
+{%- endif -%}
+
+{{ content }}
+
+{%- include disqus.html -%}
