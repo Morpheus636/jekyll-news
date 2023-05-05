@@ -1,6 +1,6 @@
 body, html {
-  margin-left:5%;
-  margin-right:5%;
+  margin-left:7%;
+  margin-right:7%;
   }
 
 h1, h2, h3 {
@@ -50,7 +50,6 @@ h1, h2, h3 {
 }
 
 .featured-story {
-
 }
 
 /* Story Layout Elements */
@@ -64,7 +63,7 @@ h1, h2, h3 {
 }
 
 .byline {
-
+  font-weight: normal;
 }
 
 .featured-image-container {
@@ -82,4 +81,12 @@ h1, h2, h3 {
 }
 .featured-image figcaption {
   text-align: right;
+  font-weight: light;
+}
+
+.article-body {
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: justify;
+  font-size: 13pt;
 }
