@@ -12,6 +12,10 @@ body, html {
   }
 }
 
+a {
+  color: $link-color;
+}
+
 /* Header Elements */
 .header-flag {
   display: block;
@@ -41,7 +45,6 @@ body, html {
   text-decoration: none;
   padding-left: 10px;
   padding-right: 10px;
-
 }
 
 /* Footer Elements */

@@ -11,7 +11,12 @@ layout: base
 
 {%- assign date = page.date | date: "%B %-d, %Y" -%}
 {%- if page.author and page.author-title -%}
-  <h3 class="byline">{{page.author}}, {{page.author-title}} | {{ date }}</h3>
+  {%- for profile in site.staff -%}
+    {%- if page.author == profile.title -%}
+      {%- assign profile-link = profile.url -%}
+    {%- endif -%}
+  {%- endfor -%}
+    <h3 class="byline"><a href="{{profile-link}}">{{page.author}}</a>, {{page.author-title}} | {{ date }}</h3>
 {%- else -%}
   <h3 class="byline">{{ date }}</h3>
 {%- endif -%}
