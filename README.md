@@ -50,7 +50,7 @@ permalink: /about/staff
 ---
 ```
 
-Then, to add a staff profile, create a new markdown file in the `_staff-profiles/` directory and add the following text at the top:
+Then, to add a staff profile, create a new markdown file in the `_staff/` directory and add the following text at the top:
 ```yaml
 ---
 layout: staff-profile
@@ -83,7 +83,9 @@ disqus:
   enabled: true
   shortname:  # Here's where you put your unique shortname
 ```
+
 ### Google Analytics
 TODO
-### Ads
+
+### AdSense
 TODO
