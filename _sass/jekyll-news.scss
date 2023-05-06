@@ -16,6 +16,10 @@ a {
   color: $link-color;
 }
 
+hr {
+  border-top: $border-style;
+}
+
 /* Header Elements */
 .header-flag {
   display: block;
@@ -32,8 +36,8 @@ a {
 }
 
 .header-nav {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: $border-style;
+  border-bottom: $border-style;
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -50,7 +54,7 @@ a {
 /* Footer Elements */
 .footer {
   margin-top: 20px;
-  border-top: 1px solid black;
+  border-top: $border-style;
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 5px;
