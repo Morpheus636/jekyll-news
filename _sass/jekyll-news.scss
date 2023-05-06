@@ -1,7 +1,17 @@
+@import "variables.scss";
+
 body, html {
   margin-left:7%;
   margin-right:7%;
+  background-color: $background-color
+}
+@media screen and (max-width: $mobile-width) {
+  body, html {
+    margin-left: 2%;
+    margin-right: 2%;
   }
+}
+
 
 h1, h2, h3 {
   text-align: center;
@@ -16,6 +26,11 @@ h1, h2, h3 {
   object-fit: contain;
   max-height: 150px;
 }
+@media screen and (max-width: $mobile-width) {
+  .header-flag {
+    width: 100%;
+  }
+}
 
 .header-nav {
   border-top: 1px solid black;
@@ -23,6 +38,7 @@ h1, h2, h3 {
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .nav-link {
@@ -47,9 +63,26 @@ h1, h2, h3 {
 
 .featured-stories-container {
   width: 100%;
+  display: inline-block;
 }
 
 .featured-story {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background-size: cover;
+  width: 33%;
+  height: 250px;
+  float: left;
+  border-left: 4px solid $background-color;
+  border-right: 4px solid $background-color;
+}
+@media screen and (max-width: $mobile-width) {
+  .featured-story {
+    width: 100%;
+    border-top: 4px solid $background-color;
+    border-bottom: 4px solid $background-color;
+  }
 }
 
 /* Story Layout Elements */
@@ -82,6 +115,11 @@ h1, h2, h3 {
 .featured-image figcaption {
   text-align: right;
   font-weight: light;
+}
+@media screen and (max-width: $mobile-width) {
+  .featured-image {
+    max-width: 100%;
+  }
 }
 
 .article-body {

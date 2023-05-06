@@ -1,9 +1,11 @@
-<div class="featured-stories-container">
-  {%- for post in site.posts -%}
-  <a href="{{ post.url }}">{{ post.title }}</a>
-    {%- if post.featured_image.path -%}
-      <div class="featured-story" style="background-image: url('img_girl.jpg');">
-      </div>
-    {%- endif -%}
-  {%- endfor -%}
+<div class="featured-image-container">
+  <div class="featured-stories-container">
+    {%- for post in site.posts -%}
+      {%- if post.featured-image.path -%}
+        <div class="featured-story" style="background-image: url('{{post.featured-image.path}}');">
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
 </div>
