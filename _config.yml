@@ -13,6 +13,9 @@ disqus:
   enabled: true
   shortname: jekyll-news-demo
 
+# Analytics
+google_analytics: G-GRV8PX7ZN1
+
 # Collections
 collections:
   posts:
