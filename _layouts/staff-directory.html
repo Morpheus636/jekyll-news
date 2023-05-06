@@ -1,0 +1,21 @@
+---
+layout: base
+---
+{{ content }}
+<div class="featured-image-container">
+  <div class="featured-stories-container">
+    {%- assign count = 0 -%}
+    {%- for post in site.staff -%}
+      {%- unless post.exclude -%}
+        {%- if post.mug-path -%}
+          <div class="featured-story" style="background-image: url('{{post.mug-path}}');">
+            <div class="featured-story-text">
+              <a class="featured-story-headline" href="{{ post.url }}">{{ post.title }}</a>
+              <p class="featured-story-byline">{{ post.author-title }}</p>
+            </div>
+          </div>
+        {%- endif -%}
+      {%- endunless -%}
+    {%- endfor -%}
+  </div>
+</div>

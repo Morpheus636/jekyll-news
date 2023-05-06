@@ -1,14 +1,26 @@
+# Basic Site Info
 title: Jekyll News Theme
 description: Built with <a href="https://git.morpheus636.com/jekyll-news">Jekyll-News</a>
 author: Morpheus636
 
+# Site Flag
 flag:
   show: true
   path: /assets/flag.png
 
+# Comments
 disqus:
   enabled: true
   shortname:  # Here's where you put your unique shortname
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:year/:month/:day/:title/
+  staff:
+    output: true
+    permalink: /about/staff/:title
 
 # Build settings
 markdown: kramdown

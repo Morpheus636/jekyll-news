@@ -41,7 +41,25 @@ permalink: # Here's where you put the relative path to this category page.
 ```
 
 ## Staff Profiles and Staff Directory
-TODO
+Create a staff directory page by creating a new HTML file with the following text:
+```yaml
+---
+layout: staff-directory
+title: Staff
+permalink: /about/staff
+---
+```
+
+Then, to add a staff profile, create a new markdown file in the `_staff-profiles/` directory and add the following text at the top:
+```yaml
+---
+layout: staff-profile
+title: # Here's where you put the name of the staffer
+author-title: # Here's where you put the staffer's title
+mug-path: # Here's where you put the URL of the staffer's mugshot
+---
+```
+After that, write their bio.
 
 ## Configuration and Customization
 ### Author

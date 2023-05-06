@@ -185,3 +185,29 @@ body, html {
 .post-list-byline {
 
 }
+
+.staff-profile {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 30px;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+.staff-profile h2 {
+  font-weight: normal;
+}
+
+.staff-mug {
+  float: left;
+  padding-right: 15px;
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 600px) {
+  .staff-mug {
+      float: none;       
+  }
+}
