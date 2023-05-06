@@ -1,10 +1,14 @@
 <div class="featured-image-container">
   <div class="featured-stories-container">
+    {%- assign count = 0 -%}
     {%- for post in site.posts -%}
       {%- if post.featured-image.path -%}
-        <div class="featured-story" style="background-image: url('{{post.featured-image.path}}');">
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </div>
+        {%- assign count = count | plus: 1 -%}
+        {%- if count <= 3 -%}
+          <div class="featured-story" style="background-image: url('{{post.featured-image.path}}');">
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </div>
+        {%- endif -%}
       {%- endif -%}
     {%- endfor -%}
   </div>
