@@ -11,7 +11,7 @@ flag:
 # Comments
 disqus:
   enabled: true
-  shortname:  # Here's where you put your unique shortname
+  shortname: jekyll-news-demo
 
 # Collections
 collections:
