@@ -86,7 +86,10 @@ disqus:
 ```
 
 ### Google Analytics
-TODO
+To enable Google Analytics, add your measurement ID in `_config.yml` as follows:
+```yaml
+google_analytics: # Here's where your measurement ID goes.
+```
 
 ### AdSense
 TODO
