@@ -1,5 +1,8 @@
 ---
 layout: base 
 ---
-{% include featured-stories.html %}
+{%- include featured-stories.html -%}
+{%- for category in site.categories -%}
+  {{ category | first }}
+{%- endfor -%}
 {{ content }}

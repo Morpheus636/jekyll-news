@@ -1,7 +1,20 @@
 # jekyll-news
-A simple newspaper theme for Jekyll.
+An all-in-one newspaper theme for Jekyll.
 
-## Creating Articles
+## Home Page
+To create the home page, make a file called `index.html` in the root directory and add the following text.
+```yml
+---
+layout: home
+permalink: /
+title: Home
+---
+```
+
+## Categories
+Define your categories as a list in 
+
+## Articles
 To add a new article, create a markdown file in `_posts/` with the following name format: `YYYY-MM-DD-SLUG.md`.
 
 Then, at the beginning of the file, add the following front-matter.  Not all of this is required, but things may not look right if you don't include everything.
@@ -16,9 +29,12 @@ featured-image:
   path: # URL or relative path to the post's featured image
   cutline: # Caption for the image
   credit: # Photo credit for the image
-layout: article
+layout: post
 ---
 ```
+
+## Staff Profiles and Staff Directory
+TODO
 
 ## Configuration and Customization
 ### Author
@@ -27,7 +43,6 @@ The `author` value in `_config.yml` is used for the copyright notice in the site
 The `title` value in `_config.yml` is the name of the site.
 ### Description
 The `description` value in `_config.yml` is the text that appears next to the coopyright notice in the site footer.
-
 ### Flag:
 To modify the flag, add the following to `_config.yml`:
 ```yaml
@@ -36,11 +51,14 @@ flag:
   path: # Here's where you put the URL (or relative path) to your flag image
 ```
 Alternatively, you can completely override the default flag by creating a new `_includes/flag.html`
-
 ### Disqus:
 To enable Disqus comments on posts, add the following to `_config.yml`:
 ```yaml
 disqus:
   enabled: true
   shortname:  # Here's where you put your unique shortname
-```Lead Developer
+```
+### Google Analytics
+TODO
+### Ads
+TODO
