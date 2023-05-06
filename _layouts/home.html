@@ -3,6 +3,34 @@ layout: base
 ---
 {%- include featured-stories.html -%}
 {%- for category in site.categories -%}
-  {{ category | first }}
+  <div>
+    <h2>{{ category | first }}</h2>
+      {%- assign category_posts = category[1] | sort: "date" | reverse | limit: 3 -%}
+      {%- for post in category_posts -%}
+        <div class="post-list-post">
+          {%- if post.featured-image.path -%}
+            <img class="list-image" src="{{ post.featured-image.path }}" />
+          {%- endif -%}
+
+          <a class="post-list-headline" href="{{ post.url }}">{{ post.title }}</a>
+          {%- assign date = post.date | date: "%B %-d, %Y" -%}
+          {%- if post.author and post.author-title -%}
+            <p class="post-list-byline">{{post.author}}, {{post.author-title}} | {{ date }}</p>
+          {%- else -%}
+            <p class="post-list-byline">{{ date }}</p>
+          {%- endif -%}
+
+          {%- assign paragraphs = post.content | split: '</p>' -%}
+          {%- assign first_paragraph = paragraphs[0] | append: '</p>' -%}
+          {%- assign words = first_paragraph | strip_html | number_of_words -%}
+          {%- if words > 50 -%}
+            {%- assign truncated_paragraph = first_paragraph | strip_html | truncatewords: 50, "" | append: "..." -%}
+            <span class="post-list-summary">{{ truncated_paragraph }}</span>
+          {%- else -%}
+          <span class="post-list-summary">{{ first_paragraph }}</span>
+          {%- endif -%}          
+        </div>
+      {%- endfor -%}
+  </div>
 {%- endfor -%}
 {{ content }}

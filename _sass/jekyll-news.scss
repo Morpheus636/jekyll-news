@@ -80,6 +80,33 @@ body, html {
   }
 }
 
+.featured-story-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.featured-story-headline {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14pt;
+}
+
+.featured-story-byline {
+  color: white;
+  font-size: 12pt;
+}
+
+.featured-story:hover .featured-story-text {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 /* Story Layout Elements */
 .headline {
   text-align: center;
@@ -100,6 +127,7 @@ body, html {
   margin-right: 25%;
 }
 
+/* Featured image and cutline */
 .featured-image-container {
   display: flex;
   justify-content: center;
@@ -128,4 +156,32 @@ body, html {
   margin-right: 5%;
   text-align: justify;
   font-size: 13pt;
+}
+
+/* Post List Elements */
+.post-list-post {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.post-list-post img {
+  height: 150px;
+  width: 150px;
+  float: left;
+  margin-right: 15px;
+}
+
+.post-list-headline {
+  font-weight: bold;
+  color: black;
+  font-size: 16pt;
+}
+
+.post-list-summary {
+  color: grey;
+}
+
+.post-list-byline {
+
 }

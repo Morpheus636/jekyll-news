@@ -6,7 +6,15 @@
         {%- assign count = count | plus: 1 -%}
         {%- if count <= 3 -%}
           <div class="featured-story" style="background-image: url('{{post.featured-image.path}}');">
-            <a href="{{ post.url }}">{{ post.title }}</a>
+            <div class="featured-story-text">
+              <a class="featured-story-headline" href="{{ post.url }}">{{ post.title }}</a>
+              {%- assign date = post.date | date: "%B %-d, %Y" -%}
+              {%- if post.author and post.author-title -%}
+                <p class="featured-story-byline">{{post.author}}, {{post.author-title}} | {{ date }}</p>
+              {%- else -%}
+                <p class="featured-story-byline">{{ date }}</p>
+              {%- endif -%}
+            </div>
           </div>
         {%- endif -%}
       {%- endif -%}
