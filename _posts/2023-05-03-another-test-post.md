@@ -8,6 +8,7 @@ featured-image:
   cutline: Test cutline
   credit: Josh Levin
 layout: post
+category: Test
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus in hac habitasse platea dictumst quisque. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. Sed felis eget velit aliquet sagittis id consectetur purus. Tincidunt tortor aliquam nulla facilisi cras fermentum. Purus in mollis nunc sed id semper risus. Potenti nullam ac tortor vitae purus faucibus. Tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Diam sollicitudin tempor id eu nisl nunc mi ipsum faucibus. Orci nulla pellentesque dignissim enim. Ullamcorper morbi tincidunt ornare massa eget egestas purus viverra. Pretium nibh ipsum consequat nisl vel pretium. Sem nulla pharetra diam sit. Elementum integer enim neque volutpat ac tincidunt vitae semper.

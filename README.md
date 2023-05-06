@@ -11,9 +11,6 @@ title: Home
 ---
 ```
 
-## Categories
-Define your categories as a list in 
-
 ## Articles
 To add a new article, create a markdown file in `_posts/` with the following name format: `YYYY-MM-DD-SLUG.md`.
 
@@ -30,6 +27,16 @@ featured-image:
   cutline: # Caption for the image
   credit: # Photo credit for the image
 layout: post
+---
+```
+
+## Category Pages
+To add a new category page, create a new HTML file in the root directory. Then add the following text:
+```yaml
+---
+layout: category
+title: # Here's where you put the name of the category this page is for.
+permalink: # Here's where you put the relative path to this category page.
 ---
 ```
 
