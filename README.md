@@ -8,6 +8,7 @@ To create the home page, make a file called `index.html` in the root directory a
 layout: home
 permalink: /
 title: Home
+exclude: true
 ---
 ```
 
