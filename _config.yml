@@ -11,7 +11,7 @@ flag:
 # Comments
 disqus:
   enabled: true
-  shortname: jekyll-news-demo
+  shortname: jekyll-news-demo  #REPLACEME
 
 # Analytics
 google_analytics: G-GRV8PX7ZN1
@@ -19,7 +19,7 @@ google_analytics: G-GRV8PX7ZN1
 # Ads
 adsense:
   enabled: false
-  client: ca-pub-xxxxxxxxxxxxxxxx"ca-pub-9280169319319657"
+  client: ca-pub-xxxxxxxxxxxxxxxx  #REPLACEME
 
 # Collections
 collections:
