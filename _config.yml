@@ -19,7 +19,7 @@ google_analytics: G-GRV8PX7ZN1
 # Ads
 adsense:
   enabled: false
-  client: ca-pub-xxxxxxxxxxxxxxxx  #REPLACEME
+  data-ad-client: ca-pub-xxxxxxxxxxxxxxxx  #REPLACEME
 
 # Collections
 collections:
