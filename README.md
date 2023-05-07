@@ -1,7 +1,8 @@
 # jekyll-news
 An all-in-one newspaper theme for Jekyll.
 
-## Home Page
+## Page Templates
+### Home Page
 To create the home page, make a file called `index.html` in the root directory and add the following text.
 ```yml
 ---
@@ -14,7 +15,21 @@ exclude: true
 
 By default, any additional content in this file will go at the bottom of the page, just above the footer. If you would rather that this content be displayed in a sidebar, specify `is-sidebar: true` in the front matter. When the page size is too small to show a sidebar, it will be moved back to the footer.
 
-## Articles
+### Normal Page
+To create a basic page, make a .html or .md file anywhere in the repository and add the following front-matter:
+```yml
+layout: page
+title:
+nav-title: # OPTIONAL - specify a different title for the page when it appears in nav menus.
+exclude: true # OPTIONAL - removes the page from the menu bar.
+```
+
+Then, add your content.
+
+If you'd like to add a sidebar to this page, put your main content inside a `<div class="main-content">`, and the sidebar content directly below it in a `div class="sidebar"`.
+
+
+### Articles
 To add a new article, create a markdown file in `_posts/` with the following name format: `YYYY-MM-DD-SLUG.md`.
 
 Then, at the beginning of the file, add the following front-matter.  Not all of this is required, but things may not look right if you don't include everything.
@@ -33,7 +48,7 @@ layout: post
 ---
 ```
 
-## Category Pages
+### Category Pages
 To add a new category page, create a new HTML file in the root directory. Then add the following text:
 ```yaml
 ---
@@ -43,7 +58,7 @@ permalink: # Here's where you put the relative path to this category page.
 ---
 ```
 
-## Staff Profiles and Staff Directory
+### Staff Profiles and Staff Directory
 Create a staff directory page by creating a new HTML file with the following text:
 ```yaml
 ---
@@ -64,13 +79,14 @@ mug-path: # Here's where you put the URL of the staffer's mugshot
 ```
 After that, write their bio.
 
-## Configuration and Customization
+## Configuration
 ### Author
 The `author` value in `_config.yml` is used for the copyright notice in the site footer.
 ### Title
 The `title` value in `_config.yml` is the name of the site.
 ### Description
 The `description` value in `_config.yml` is the text that appears next to the coopyright notice in the site footer.
+
 ### Flag:
 To modify the flag, add the following to `_config.yml`:
 ```yaml
@@ -79,6 +95,7 @@ flag:
   path: # Here's where you put the URL (or relative path) to your flag image
 ```
 Alternatively, you can completely override the default flag by creating a new `_includes/flag.html`
+
 ### Disqus:
 To enable Disqus comments on posts, add the following to `_config.yml`:
 ```yaml
