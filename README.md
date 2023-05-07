@@ -94,4 +94,26 @@ google_analytics: # Here's where your measurement ID goes.
 ```
 
 ### AdSense
-TODO
+> **Note**
+> These instructions rely on you having control of and serving this site from a apex domain, not a subdomain
+
+1. Create an AdSense account at https://adsense.google.com/adsense/signup
+2. On the "A couple things before you start" page, select "I don't have a site yet", opt in or out of notifications, enter your country, then agree to the TOS.
+3. On the "Lets get you started" page, click "Add site" and enter your apex domain.
+4. Click "Let's go" under "Connect your site to AdSense"
+5. Copy the Client ID from the code snippet.
+  - This is the part right after `?client=` (everything from the `=` to the `"`).
+  - It should be in the format `ca-pub-xxxxxxxxxxxxxxxx` (the exact number of digits might vary)
+6. In _config.yml, add the following code:
+```yaml
+adsense:
+  enabled: true
+  client: # Put the Client ID you just copied here
+```
+7. Deploy your changes.
+8. Back on the AdSense page with the code snippet, check the box that says "I've placed the code" and click Next, and then Request review.
+9. Enter your payment information on the AdSense dashboard.
+10. Start placing ads. Simply add `{%- include adsense.html -%}` anywhere you want an ad to appear.
+
+> **Warning**
+> Ensure you comply with privacy regulations like [GDPR](https://support.google.com/adsense/answer/7670013?hl=en) and [CCPA](https://support.google.com/adsense/answer/9560818?hl=en) before showing ads to your users.

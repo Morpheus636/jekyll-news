@@ -16,6 +16,11 @@ disqus:
 # Analytics
 google_analytics: G-GRV8PX7ZN1
 
+# Ads
+adsense:
+  enabled: false
+  client: ca-pub-xxxxxxxxxxxxxxxx"ca-pub-9280169319319657"
+
 # Collections
 collections:
   posts:
