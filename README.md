@@ -12,6 +12,8 @@ exclude: true
 ---
 ```
 
+By default, any additional content in this file will go at the bottom of the page, just above the footer. If you would rather that this content be displayed in a sidebar, specify `is-sidebar: true` in the front matter. When the page size is too small to show a sidebar, it will be moved back to the footer.
+
 ## Articles
 To add a new article, create a markdown file in `_posts/` with the following name format: `YYYY-MM-DD-SLUG.md`.
 
