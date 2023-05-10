@@ -166,7 +166,7 @@ hr {
   margin-left: auto;
   margin-right: auto;
   text-align: center;}
-.featured-image img{
+.featured-image img {
   width: 100%;
 }
 .featured-image figcaption {
@@ -199,6 +199,7 @@ hr {
   width: 150px;
   float: left;
   margin-right: 15px;
+  object-fit: cover;
 }
 
 .post-list-headline {
