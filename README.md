@@ -134,3 +134,6 @@ adsense:
 
 > **Warning**
 > Ensure you comply with privacy regulations like [GDPR](https://support.google.com/adsense/answer/7670013?hl=en) and [CCPA](https://support.google.com/adsense/answer/9560818?hl=en) before showing ads to your users.
+
+## Overriding Style
+Create a file called `_sass/overrides.scss`. Any styles in it will override existing styles. 
