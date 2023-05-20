@@ -137,3 +137,6 @@ adsense:
 
 ## Overriding Style
 Create a file called `_sass/overrides.scss`. Any styles in it will override existing styles. 
+
+## Custom Head
+Create a file called `_includes/head-custom.html`. It's contents will be added at the end of the template's `<head>`.
