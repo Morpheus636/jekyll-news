@@ -100,6 +100,8 @@ hr {
   float: left;
   border-left: 4px solid $background-color;
   border-right: 4px solid $background-color;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 @media screen and (max-width: $mobile-width) {
   .featured-story {
@@ -117,6 +119,7 @@ hr {
   height: 100%;
   opacity: 0;
   transition: opacity 0.5s ease;
+  text-align: center;
 }
 
 .featured-story-headline {
