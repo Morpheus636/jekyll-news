@@ -33,6 +33,7 @@ hr {
 .sidebar {
   flex-basis: 25%;
   margin-left: 15px;
+  margin-top: 10px;
 }
 @media screen and (max-width: calc(#{$mobile-width} + 200px)) {
   .sidebar {
