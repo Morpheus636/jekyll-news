@@ -12,20 +12,16 @@ layout: base
 
 <div class="featured-image-container">
   <div class="featured-stories-container">
-    {%- assign count = 0 -%}
     {%- for post in site.posts -%}
       {%- if post.author == page.title -%}
         {%- if post.featured-image.path -%}
-          {%- assign count = count | plus: 1 -%}
-          {%- if count <= 3 -%}
-            <div class="featured-story" style="background-image: url('{{post.featured-image.path}}');">
-              <div class="featured-story-text">
-                <a class="featured-story-headline" href="{{ post.url }}">{{ post.title }}</a>
-                {%- assign date = post.date | date: "%B %-d, %Y" -%}
-                <p class="featured-story-byline">{{ date }}</p>
-              </div>
+          <div class="featured-story" style="background-image: url('{{post.featured-image.path}}');">
+            <div class="featured-story-text">
+              <a class="featured-story-headline" href="{{ post.url }}">{{ post.title }}</a>
+              {%- assign date = post.date | date: "%B %-d, %Y" -%}
+              <p class="featured-story-byline">{{ date }}</p>
             </div>
-          {%- endif -%}
+          </div>
         {%- endif -%}
       {%- endif -%}
     {%- endfor -%}
