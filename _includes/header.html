@@ -1,6 +1,7 @@
 <div>
   {%- include flag.html -%}
       <nav class="header-nav">
+        <ul class="nav-list">
         {%- assign default_paths = site.pages | map: "path" -%}
         {%- assign page_paths = site.header_pages | default: default_paths -%}
         {%- for path in page_paths -%}
@@ -14,10 +15,13 @@
       
           {%- if title != "" -%}
             {%- unless my_page.exclude -%}
-            <a class="nav-link" href="{{ my_page.url | relative_url }}">{{ title | escape }}</a>
+            <li>
+              <a class="nav-link" href="{{ my_page.url | relative_url }}">{{ title | escape }}</a>
+            </li>
             {%- endunless -%}
           {%- endif -%}
           {%- assign title = "" -%}
         {%- endfor -%}
+        </ul>
       </nav>
 </div>
