@@ -7,7 +7,7 @@ layout: base
     {%- for category in site.categories -%}
       <div>
         <h2>{{ category | first }}</h2>
-          {%- assign all_category_posts = site.categories[category] | reverse -%}
+          {%- assign all_category_posts = category[1] | reverse -%}
           {%- assign category_posts = all_category_posts | limit: 3 -%}
           {%- for post in category_posts -%}
             <div class="post-list-post">
