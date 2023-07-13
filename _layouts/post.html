@@ -24,7 +24,7 @@ layout: base
 {%- if page.featured-image.path -%}
   <div class="featured-image-container">
   <figure class="featured-image">
-    <img src="{{ page.featured-image.path }}"/>
+    <img src="{{ page.featured-image.path }}" alt="{{ page.featured-image.alt-text }}"/>
     <figcaption>{{ page.featured-image.cutline }} - Photo by {{ page.featured-image.credit }}</figcaption>
   </figure>
   </div>

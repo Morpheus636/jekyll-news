@@ -14,7 +14,7 @@ layout: base
             {%- if count <= 3 -%}
               <div class="post-list-post">
                 {%- if post.featured-image.path -%}
-                  <img class="list-image" src="{{ post.featured-image.path }}" />
+                  <img class="list-image" src="{{ post.featured-image.path }}" alt="{{ post.featured-image.alt-text }}"/>
                 {%- endif -%}
 
                 <a class="post-list-headline" href="{{ post.url }}">{{ post.title }}</a>
