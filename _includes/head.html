@@ -36,7 +36,7 @@
   {%- else -%}
     <meta property="og:type" content="website"/>
   {%- endif -%}
-  <!-- OpenGraph Description -->
+  <!-- Description -->
   {%- if page.description -%}
     {%- assign description = page.description -%}
   {%- elsif page.subhed -%}
@@ -44,7 +44,7 @@
   {%- else -%}
     {%- assign description = site.description -%}
   {%- endif -%}
-  <meta property="og:description" content="{{ description }}" />
+  <meta property="description" content="{{ description }}" />
 
   <title>{{ page.title }} | {{ site.title }}</title>
 
