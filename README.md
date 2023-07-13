@@ -44,6 +44,7 @@ featured-image:
   path: # URL or relative path to the post's featured image
   cutline: # Caption for the image
   credit: # Photo credit for the image
+  alt-text: # Description of the image for accessibility reasons
 layout: post
 ---
 ```
