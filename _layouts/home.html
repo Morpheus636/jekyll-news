@@ -25,14 +25,19 @@ layout: base
                   <p class="post-list-byline">{{ date }}</p>
                 {%- endif -%}
 
-                {%- assign paragraphs = post.content | split: '</p>' -%}
-                {%- assign first_paragraph = paragraphs[0] | append: '</p>' -%}
-                {%- assign words = first_paragraph | strip_html | number_of_words -%}
+                {%- if post.description -%}
+                  {%- assign excerpt = post.description -%}
+                {%- else -%}
+                  {%- assign paragraphs = post.content | split: '</p>' -%}
+                  {%- assign excerpt = paragraphs[0] | append: '</p>' -%}
+                {%- endif -%}
+
+                {%- assign words = excerpt | strip_html | number_of_words -%}
                 {%- if words > 35 -%}
-                  {%- assign truncated_paragraph = first_paragraph | strip_html | truncatewords: 35, "" | append: "..." -%}
+                  {%- assign truncated_paragraph = excerpt | strip_html | truncatewords: 35, "" | append: "..." -%}
                   <span class="post-list-summary">{{ truncated_paragraph }}</span>
                 {%- else -%}
-                <span class="post-list-summary">{{ first_paragraph }}</span>
+                  <span class="post-list-summary">{{ excerpt }}</span>
                 {%- endif -%}          
               </div>
             {%- else -%}
